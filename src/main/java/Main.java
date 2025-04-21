@@ -4,10 +4,7 @@ import booking.CarBookingService;
 import car.Car;
 import car.CarDao;
 import car.CarService;
-import user.User;
-import user.UserDao;
-import user.UserFileDataAccessService;
-import user.UserService;
+import user.*;
 
 import java.util.List;
 import java.util.Scanner;
@@ -15,7 +12,7 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
-        UserDao userDao = new UserFileDataAccessService();
+        UserDao userDao = new UserFakerDataAccessService();
         UserService userService = new UserService(userDao);
 
         CarDao carDao = new CarDao();

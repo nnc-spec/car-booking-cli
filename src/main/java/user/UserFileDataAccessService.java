@@ -14,8 +14,8 @@ public class UserFileDataAccessService implements UserDao {
 
     @Override
     public List<User> getUsers() {
-        File file = new File("src/com/car-booking-cli/users.csv");
 
+        File file = new File(getClass().getClassLoader().getResource("users.csv").getPath());
          /*
              Size 4 because I know there are 4 entries in src/users.csv
              If you add more rows in the file update the size of the initial array too
